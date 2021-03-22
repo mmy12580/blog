@@ -1,0 +1,50 @@
+baseURL = "https://mmy12580.github.io"
+languageCode = "en-us"
+title = "Moyan's Website"
+theme ='LeaveIt'
+
+
+paginate = 12
+enableEmoji = false
+enableRobotsTXT = true
+googleAnalytics = ""
+
+preserveTaxonomyNames = true
+#publishDir = 'public'
+
+[params]
+    since = 2018
+    author = "Moyan Mei"
+    subtitle = "Artificial Intelligence Researcher | Technology Enthusiast"
+    description = "Moyan's personal website"
+    keywords = "deep learning, machine learning, natural language processing"
+    avatar = "images/avatar.jpg"
+
+
+
+# Social links
+[params.social]
+    GitHub = "mmy12580"
+    LinkedIn = 'moyan-mei-ba7431b1'
+    Email  = "mmy12580@gmail.com"
+    Facebook = "moyan.mei.39"
+    Wechat = "images/wechat_qrcode.jpg"  
+
+
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 2
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
