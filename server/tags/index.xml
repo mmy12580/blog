@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Moyan&#39;s Website</title>
+    <link>https://mmy12580.github.io/tags/</link>
+    <description>Recent content in Tags on Moyan&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Jun 2019 11:28:17 -0400</lastBuildDate>
+    
+	<atom:link href="https://mmy12580.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>data</title>
+      <link>https://mmy12580.github.io/tags/data/</link>
+      <pubDate>Tue, 18 Jun 2019 11:28:17 -0400</pubDate>
+      
+      <guid>https://mmy12580.github.io/tags/data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>https://mmy12580.github.io/tags/machine-learning/</link>
+      <pubDate>Tue, 18 Jun 2019 11:28:17 -0400</pubDate>
+      
+      <guid>https://mmy12580.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deep learning</title>
+      <link>https://mmy12580.github.io/tags/deep-learning/</link>
+      <pubDate>Mon, 17 Jun 2019 12:21:44 -0400</pubDate>
+      
+      <guid>https://mmy12580.github.io/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>training tricks</title>
+      <link>https://mmy12580.github.io/tags/training-tricks/</link>
+      <pubDate>Mon, 17 Jun 2019 12:21:44 -0400</pubDate>
+      
+      <guid>https://mmy12580.github.io/tags/training-tricks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://mmy12580.github.io/tags/python/</link>
+      <pubDate>Thu, 23 May 2019 10:41:23 -0400</pubDate>
+      
+      <guid>https://mmy12580.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://mmy12580.github.io/tags/github/</link>
+      <pubDate>Fri, 01 Mar 2019 11:27:28 -0500</pubDate>
+      
+      <guid>https://mmy12580.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://mmy12580.github.io/tags/hugo/</link>
+      <pubDate>Fri, 01 Mar 2019 11:27:28 -0500</pubDate>
+      
+      <guid>https://mmy12580.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>optimization</title>
+      <link>https://mmy12580.github.io/tags/optimization/</link>
+      <pubDate>Fri, 25 Jan 2019 11:18:47 -0500</pubDate>
+      
+      <guid>https://mmy12580.github.io/tags/optimization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>natural language processing</title>
+      <link>https://mmy12580.github.io/tags/natural-language-processing/</link>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmy12580.github.io/tags/natural-language-processing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

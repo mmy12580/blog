@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deep learning on Moyan&#39;s Website</title>
+    <link>https://mmy12580.github.io/tags/deep-learning/</link>
+    <description>Recent content in deep learning on Moyan&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Jun 2019 12:21:44 -0400</lastBuildDate>
+    
+	<atom:link href="https://mmy12580.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Training on Large Batches</title>
+      <link>https://mmy12580.github.io/posts/training_nn_on_large_batches/</link>
+      <pubDate>Mon, 17 Jun 2019 12:21:44 -0400</pubDate>
+      
+      <guid>https://mmy12580.github.io/posts/training_nn_on_large_batches/</guid>
+      <description>According to Sebastian Ruder&amp;rsquo;s blog post, the ImageNet moment of NLP has arrived. Especially, models like e.g BERT, ELMO, UlMFIT,Open-GPT, Transformer-XL have become the main stream choice of most downstream NLP tasks. However, it is still quite difficult to conduct a transfer learning task from a pre-training model such as 345 millions parameter open-gpt2 with a large batch say 256. Certainly, if your NLP tasks is with small datasets, and you are able to use batch_size = 8, and wait for 2-4 hours to do it, that is none of the cases I am talking about here.</description>
+    </item>
+    
+    <item>
+      <title>Amazing Optimizer until 2019.3</title>
+      <link>https://mmy12580.github.io/posts/optimizers/</link>
+      <pubDate>Fri, 25 Jan 2019 11:18:47 -0500</pubDate>
+      
+      <guid>https://mmy12580.github.io/posts/optimizers/</guid>
+      <description>Introduction As a researcher, most time of my job is to build an approriate AI prototype for specific tasks. To achieve a satisfactoring result, an expected large amount of work i.e tuning hyper-parameters, balancing data, augmentation etc are needed. One of the hyper-parameters has the most impactul effects on the results. Sometime, it is able to determine the direction of research or indutrial deployment, which is learning rate The learning rate is one of the most important things need to be taken care of.</description>
+    </item>
+    
+    <item>
+      <title>Activation is important!</title>
+      <link>https://mmy12580.github.io/posts/activation/</link>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mmy12580.github.io/posts/activation/</guid>
+      <description>Overview: Activation functions play a crucial rule in neural networks because they are the nonlinearities which have been attributed to the success story of deep learning. At present, the most popular activation functions are ReLU and its extended work such as LReLU, PReLu, ELU, SELU, and CReLU etc. However, none of them is guaranteed to perform better then others in all applications, so it becomes fundamental to understand their advantages and disadvantages in order to achieve better performances in specific applications.</description>
+    </item>
+    
+  </channel>
+</rss>

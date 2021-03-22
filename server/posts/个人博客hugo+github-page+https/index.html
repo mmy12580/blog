@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Moyan Mei">
+  <meta name="description" content="Moyan&#39;s personal website">
+  <meta name="keywords" content="deep learning, machine learning, natural language processing">
+  
+  <link rel="prev" href="https://mmy12580.github.io/posts/optimizers/" />
+  <link rel="next" href="https://mmy12580.github.io/posts/faiss_dev/" />
+  <link rel="canonical" href="https://mmy12580.github.io/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2hugo&#43;github-page&#43;https/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           网站搭建:hugo&#43;github | Moyan&#39;s Website
+       
+  </title>
+  <meta name="title" content="网站搭建:hugo&#43;github | Moyan&#39;s Website">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/mmy12580.github.io"
+    },
+    "articleSection" : "posts",
+    "name" : "网站搭建:hugo\x2bgithub",
+    "headline" : "网站搭建:hugo\x2bgithub",
+    "description" : "初衷 个人网站这个事情，想倒腾很久了。可惜一直被各种事情给影响，近来想着，还是得发一下狠。在2019年年初倒腾一个个人网站，原因很简单，高效的做做笔记，发表一些看法，希望能和更多人交流，学习以及成长。Stay foolish, stay hungary! 本文将介绍如何搭配Hugo \x2b Github Pages \x2b 个人域名的流程。因为我是用Mac搭建的，所以这里的准备工作和具体的流程都只包含了如何用Mac搭建（linux 大同小异)。这里对windows的童鞋先说声抱歉了(シ_ _)シ，因为我学代码开始没用过😅。对于写代码的要求，这里并不高，只需要你对terminal会用一些常用的代码就可以了，当然，其最基本的git的代码还是需要的 e.g git clone, add, commit, push这些 。而对于完全没写过代码的小白，有一些东西也只能麻烦你们自己google了，比如如何建立github。我这里会提供一些相对应的链接，以方便你在建立网站时的流程.\n准备工作 正如标题所说，只需要安装hugo, github page, 以及https保障网站安全就好了.\n依赖环境：  brew git hugo  前期安装 安装brew, 先打开spotlight输入terminal, 然后复制以下代码\n\/usr\/bin\/ruby -e \x26quot;$(curl -fsSL https:\/\/raw.githubusercontent.com\/Homebrew\/install\/master\/install)\x26quot;  安装后，安装git\nbrew install git  安装我们需要的网站建立的框架\nbrew install hugo  选择管理blog的位置,例如我的桌面，然后建立新项目e.g myblog, 并进入blog文件夹\ncd ~\/Desktop hugo new site myblog cd myblog  尝试建立内容为”hello world\x26rdquo;的post, 将其命名为myfirst_post.md\nhugo new posts\/myfirst_post echo \x26quot;hello world\x26quot; \x26gt; content\/posts\/myfirst_post.",
+    "inLanguage" : "en-us",
+    "author" : "Moyan Mei",
+    "creator" : "Moyan Mei",
+    "publisher": "Moyan Mei",
+    "accountablePerson" : "Moyan Mei",
+    "copyrightHolder" : "Moyan Mei",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-03-01 11:27:28 -0500 EST",
+    "dateModified" : "2019-03-01 11:27:28 -0500 EST",
+    "url" : "https:\/\/mmy12580.github.io\/posts\/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2hugo\x2bgithub-page\x2bhttps\/",
+    "wordCount" : "281",
+    "keywords" : [ "github","hugo", "Moyan\x27s Website"]
+}
+</script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="fas fa-lightbulb"></i></a>&nbsp;<a href="https://mmy12580.github.io">Moyan&#39;s Website</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-lightbulb"></i></a>&nbsp;<a href="https://mmy12580.github.io">Moyan&#39;s Website</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">网站搭建:hugo&#43;github</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://mmy12580.github.io" rel="author">Moyan Mei</a>   
+                <span class="post-time">
+                on <time datetime=2019-03-01 itemprop="datePublished">March 1, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://mmy12580.github.io/categories/website/"> website </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="初衷">初衷</h1>
+
+<p>个人网站这个事情，想倒腾很久了。可惜一直被各种事情给影响，近来想着，还是得发一下狠。在2019年年初倒腾一个个人网站，原因很简单，高效的做做笔记，发表一些看法，希望能和更多人交流，学习以及成长。Stay foolish, stay hungary!
+本文将介绍如何搭配Hugo + Github Pages + 个人域名的流程。因为我是用Mac搭建的，所以这里的准备工作和具体的流程都只包含了如何用Mac搭建（linux 大同小异)。这里对windows的童鞋先说声抱歉了(シ_ _)シ，因为我学代码开始没用过😅。对于写代码的要求，这里并不高，只需要你对terminal会用一些常用的代码就可以了，当然，其最基本的git的代码还是需要的 e.g git clone, add, commit, push这些 。而对于完全没写过代码的小白，有一些东西也只能麻烦你们自己google了，比如如何建立github。我这里会提供一些相对应的链接，以方便你在建立网站时的流程.</p>
+
+<h2 id="准备工作">准备工作</h2>
+
+<p>正如标题所说，只需要安装hugo, github page, 以及https保障网站安全就好了.</p>
+
+<h3 id="依赖环境">依赖环境：</h3>
+
+<ul>
+<li>brew</li>
+<li>git</li>
+<li>hugo</li>
+</ul>
+
+<h3 id="前期安装">前期安装</h3>
+
+<p>安装brew, 先打开<code>spotlight</code>输入<code>terminal</code>, 然后复制以下代码</p>
+
+<pre><code class="language-nolinenumbers">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+
+<p>安装后，安装git</p>
+
+<pre><code class="language-nolinenumbers">brew install git
+</code></pre>
+
+<p>安装我们需要的网站建立的框架</p>
+
+<pre><code class="language-nolinenumbers">brew install hugo
+</code></pre>
+
+<p>选择管理blog的位置,例如我的桌面，然后建立新项目e.g myblog, 并进入blog文件夹</p>
+
+<pre><code class="language-nolinenumbers">cd ~/Desktop
+hugo new site myblog
+cd myblog
+</code></pre>
+
+<p>尝试建立内容为”hello world&rdquo;的post, 将其命名为myfirst_post.md</p>
+
+<pre><code class="language-nolinenumbers">hugo new posts/myfirst_post
+echo &quot;hello world&quot; &gt; content/posts/myfirst_post.md
+</code></pre>
+
+<p>启动hugo的静态服务:</p>
+
+<pre><code class="language-nolinenumbers">hugo sever -D
+</code></pre>
+
+<p>这个时候会显示一对代码例如:</p>
+
+<pre><code class="language-plain">Serving pages from memory Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre>
+
+<p>打开浏览器，进入localhost:1313就能看到你的网站内容了;</p>
+
+<h2 id="host-on-github">Host on Github</h2>
+
+<p>这个时候的简单博客只适合在本地使用，是一个可以写完博客，并且查看所得内容的呈现，但是想要给其他人看，需要做成一个网站。作为一名程序猿，github再适合不过了。
+这里特指github page。建立github page, 可以说极其简单，直接参照<a href="https://pages.github.com/">官网</a>的第一步，进入github, 创建新的repo, 为其命名xxx.github.io. xxx要对应你的github的账号名。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/images/create_repo.png" alt="create_repo" class="lazyload"><figcaption class="image-caption">create_repo</figcaption></figure></p>
+
+<p>接下来就只需要做两件事情。</p>
+
+<ol>
+<li>将刚刚生成的blog（整个文档）做成一个github repo。将其命名为 xxxblog</li>
+<li>在生成的xxblog里，将github page repo 例如 xxx.github.io, 生成在 xxxblog里</li>
+</ol>
+
+<p>步骤一的方法可以直接参考<a href="http://leonshi.com/2016/02/01/add-existing-project-to-github/">将已存在目录转换为git repo</a>。
+完成后在目录内，运行</p>
+
+<pre><code>git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public. 
+</code></pre>
+
+<p><strong>note</strong>: 这里的<code>&lt;USERNAME&gt;</code>指的是你github账号的名字
+这行代码的意义是将你的github.io，也就是github page作为运行你的博客的host，等会可以连接你发布的静态文档，以方便其他人和自己在不同的网络里登陆并且阅读
+因为，发博客是持续性的工作，所以为了简单化发博客的特点，这里特地加了一个脚本(script)，以方便每次只需要将写好的markdown，commit到host（xxx.github.io)上。</p>
+
+<p>在当前目录下, 建立一个可执行文件 deploy.sh。将以下内容复制到deploy.sh上。</p>
+
+<pre><code>#!/bin/bash
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+
+# 启动hugo.
+hugo 
+
+# 进入public 文件夹，这个实际上是xxx.github.io
+cd public
+
+# 加入新发布的markdown
+git add .
+
+# 标注此次更新的内容与时间 
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+# 上传到xxx.github.io
+git push origin master
+
+# 返回上一级目录
+cd ..
+</code></pre>
+
+<p>将deploy.sh，变成可执行文件</p>
+
+<pre><code>chmod +x deploy.sh
+</code></pre>
+
+<p><strong>谨记</strong>：将public添加到blog里面的./gitignore，这样不会影响到repo的问题。如果没有gitignore, 可以直接创立如下.</p>
+
+<pre><code>echo public/ &gt; .gitignore
+</code></pre>
+
+<p>大功告成，以后写新的博客以及发布只需要像一下一样</p>
+
+<pre><code># 进入blog所在目录
+cd blog
+
+# 创建新博客例如 深度学习笔记
+hugo new posts/深度学习笔记.md
+
+# 运行deploy.sh 发布到自己的Host上
+./deploy.sh
+</code></pre>
+
+<h2 id="进阶设置">进阶设置</h2>
+
+<h3 id="主题设置">主题设置</h3>
+
+<p>刚刚的演示只是建立了一个小白板的过程，一个让人眼前一亮的UI，也是很需要的。可以去<a href="https://themes.gohugo.io">hugo主题</a>，下载你喜欢的主题，并放入<code>theme/</code>目录下
+。然后更改你的<code>config.toml</code>. 运行<code>hugo server -D</code>，在本地查看效果以方便调整</p>
+
+<pre><code>#将hugo那行改成 你下载的主题 例如Serif
+hugo -t Serif
+</code></pre>
+
+<p>如果你感兴趣我的主题，可以去下载<a href="https://themes.gohugo.io/leaveit/">LeaveIt</a></p>
+
+<h3 id="自定义域名">自定义域名</h3>
+
+<p>很多人感觉访问自己的博客 xxx.github.io不够酷，这里有两种方案，</p>
+
+<ol>
+<li>免费一年的域名，从<a href="https://www.freenom.com/en/index.html?lang=en">FreeNom</a>, 可获得 .TK / .ML / .GA / .CF / .GQ</li>
+<li>付费域名 e.g Godaddy, Domain.com,各种</li>
+</ol>
+
+<p>因为一致做机器学习，所以看到.ml很合适，我就选择了freenom，申请了自己<a href="moyan.ml">博客</a>的地址。申请很简单，直接按照官网步骤走，弄好之后，
+我们来连接xxx.github.io以及自己的域名例如xxx.io。</p>
+
+<pre><code># 进入github.io即为public的文件夹下
+cd blog/public
+
+# 创立一个文件并将申请的域名写入
+echo xxx.io &gt; CNAME
+
+# 复制github.io对应的地址
+ping xxx.github.io
+</code></pre>
+
+<p>然后我们进入freenom网站，添加一下xxx.github.io和xxx.io的关系。
+先进入MyDomains -&gt; Manage Domain -&gt; Management Tools -&gt; NameServers把DNSPod中刚刚生成出的两个记录例如192.30.252.153 和 192.30.252.154
+以A类写入。刚刚生成的CNAME自动会将xxx.github.io转为刚刚申请的xxx.io。保存后过几个小时，点开xxx.io即可使用。</p>
+
+<h3 id="添加https">添加https</h3>
+
+<p>建议使用<a href="cloudxns.net">cloudxns</a>.完全免费，没有任何复杂的东西。其实添加https意义并不大，个人主页基本上其实也是分享一些东西。几乎也不会有任何攻击。
+感兴趣的同学可以查看<a href="https://blog.csdn.net/luckytanggu/article/details/83089655">教程</a>.</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Moyan Mei </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://mmy12580.github.io/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2hugo&#43;github-page&#43;https/>https://mmy12580.github.io/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2hugo&#43;github-page&#43;https/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://mmy12580.github.io/tags/github/">
+                    #github</a></span>
+            
+            <span class="tag"><a href="https://mmy12580.github.io/tags/hugo/">
+                    #hugo</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://mmy12580.github.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://mmy12580.github.io/posts/optimizers/" class="prev" rel="prev" title="Amazing Optimizer until 2019.3"><i class="iconfont icon-left"></i>&nbsp;Amazing Optimizer until 2019.3</a>
+         
+        
+        <a href="https://mmy12580.github.io/posts/faiss_dev/" class="next" rel="next" title="Industrial Solution: FAISS">Industrial Solution: FAISS&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://mmy12580.github.io">Moyan Mei</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+ 
+
+    <script type="text/javascript" async
+      src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'>
+      MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+      });
+      MathJax.Hub.Queue(function() {
+        
+        
+        
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+
+      MathJax.Hub.Config({
+      
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>    
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+     </div>
+  </body>
+</html>

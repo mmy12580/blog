@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Moyan&#39;s Website</title>
+    <link>https://mmy12580.github.io/categories/</link>
+    <description>Recent content in Categories on Moyan&#39;s Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Jun 2019 11:28:17 -0400</lastBuildDate>
+    
+	<atom:link href="https://mmy12580.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>machine learning</title>
+      <link>https://mmy12580.github.io/categories/machine-learning/</link>
+      <pubDate>Tue, 18 Jun 2019 11:28:17 -0400</pubDate>
+      
+      <guid>https://mmy12580.github.io/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deep learning</title>
+      <link>https://mmy12580.github.io/categories/deep-learning/</link>
+      <pubDate>Mon, 17 Jun 2019 12:21:44 -0400</pubDate>
+      
+      <guid>https://mmy12580.github.io/categories/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://mmy12580.github.io/categories/python/</link>
+      <pubDate>Thu, 23 May 2019 10:41:23 -0400</pubDate>
+      
+      <guid>https://mmy12580.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>website</title>
+      <link>https://mmy12580.github.io/categories/website/</link>
+      <pubDate>Fri, 01 Mar 2019 11:27:28 -0500</pubDate>
+      
+      <guid>https://mmy12580.github.io/categories/website/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
